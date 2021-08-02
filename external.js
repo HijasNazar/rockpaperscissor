@@ -91,11 +91,13 @@ function winner(num1,num2){
     if(num1>num2)
     {
         console.log("YOU WON AGAINST COMPUTER");
+        return "YOU WON AGAINST COMPUTER";
     }
 
     else if(num2>num1)
     {
             console.log("COMPUTER WON AGAINST YOU");
+            return "COMPUTER WON AGAINST YOU";
     }
     
     else if(num1==num2)
@@ -107,3 +109,5 @@ function winner(num1,num2){
 let rounds = window.prompt("NUMBER OF ROUNDS");
 let result=actualgame(rounds);
 let win=winner(player,comp);
+console.log(typeof(win));
+document.write(win);
