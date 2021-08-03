@@ -77,7 +77,7 @@ function actualgame(roundsnumber){
     {
         
         let compinp=computerPlay();
-        let userinp = window.prompt("Input (Give rock/paper/scissor");
+        let userinp = window.prompt("Input (Give rock/paper/scissor)");
         let userinp1=userinp.toLowerCase();
         console.log(`Round ${i}`);
         console.log("Computer chose " +compinp+" and you chose " +userinp1);
