@@ -91,10 +91,33 @@ function playRound(playerSelection){
     document.querySelector("#roundno").textContent=`ROUND ${nthround}`;
     document.querySelector("#text").textContent=`ROUND ${nthround}: Player selected ${playerSelection} and computer selected ${computerSelection}. Player scored:${playermarks} Computer scored:${compmarks}`;
 }
+<<<<<<< HEAD
     else {
     nthround++;
     console.log('nth',nthround);
     return;
+=======
+
+return [playermarks,compmarks];
+
+}
+let comp=0;
+let player=0;
+
+function actualgame(roundsnumber){
+    for(let i=0;i<roundsnumber;i++)
+    {
+        
+        let compinp=computerPlay();
+        let userinp = window.prompt("Input (Give rock/paper/scissor)");
+        let userinp1=userinp.toLowerCase();
+        console.log(`Round ${i}`);
+        console.log("Computer chose " +compinp+" and you chose " +userinp1);
+        let out=game(userinp1,compinp);
+        comp=comp+out[0];
+        player=player+out[1];
+        console.log(`User points:${comp} Computer points:${player}`);
+>>>>>>> ba49faac19b78d63c4c0af0fb184b5872e8df7d3
     }
     finalplayer=finalplayer+playermarks;
     finalcomp=finalcomp+compmarks;
